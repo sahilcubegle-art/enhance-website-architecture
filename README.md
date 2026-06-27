@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cubegle — Corporate Website
 
 A modern, high-performance marketing website for Cubegle, a data engineering and analytics consulting company. Built with React 19, Vite 8, and Framer Motion, featuring a complete design system, hash-based routing, and responsive layouts.
@@ -313,3 +314,6 @@ Uses modern CSS features (custom properties, `backdrop-filter`, `gap`, container
 ## License
 
 Private — Cubegle Internal Use Only
+=======
+# enhance-website-architecture
+>>>>>>> bb60fad9d015a40019922312e5e6dd1784cf1edc
