@@ -1,0 +1,84 @@
+/* ── Tech Stack CSS ── */
+.tech-stack {
+  position: relative;
+}
+
+.tech-stack__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gutter);
+}
+
+.tech-stack__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  padding: var(--space-6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.tech-stack__card:hover {
+  border-color: var(--secondary-fixed-dim);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.tech-stack__logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 64px;
+  margin-bottom: var(--space-4);
+  transition: transform var(--transition-base);
+}
+
+.tech-stack__card:hover .tech-stack__logo-container {
+  transform: scale(1.1);
+}
+
+.tech-stack__logo {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.tech-stack__category {
+  font-size: 10px;
+  color: var(--outline);
+  margin-bottom: var(--space-1);
+}
+
+.tech-stack__name {
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.tech-stack__desc {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--on-surface-variant);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .tech-stack__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-stack__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack__grid {
+    grid-template-columns: 1fr;
+  }
+}

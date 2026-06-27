@@ -1,0 +1,190 @@
+/* ── Final CTA CSS ── */
+.cta {
+  position: relative;
+  background: var(--primary);
+  color: var(--on-primary);
+  overflow: hidden;
+}
+
+.cta__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(39, 53, 114, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.cta__text {
+  text-align: left;
+}
+
+.cta__heading {
+  margin-bottom: var(--space-4);
+  color: var(--on-primary);
+}
+
+.cta__subtitle {
+  color: var(--on-primary-container);
+  margin-bottom: var(--space-8);
+}
+
+.cta__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cta__benefit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--on-primary);
+}
+
+.cta__benefit-icon {
+  color: var(--secondary);
+}
+
+.cta__form-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  backdrop-filter: blur(8px);
+}
+
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cta__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.cta__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.cta__label {
+  font-size: 11px;
+  color: var(--on-primary-container);
+}
+
+.cta__input,
+.cta__select,
+.cta__textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  color: var(--on-primary);
+  font-family: inherit;
+  font-size: 14px;
+  transition: all var(--transition-base);
+}
+
+.cta__input:focus,
+.cta__select:focus,
+.cta__textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.cta__select option {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.cta__textarea {
+  resize: vertical;
+}
+
+.cta__submit {
+  width: 100%;
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.cta__spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.cta__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.cta__success-icon {
+  font-size: 64px;
+  color: var(--data-teal);
+  margin-bottom: var(--space-4);
+}
+
+.cta__success-title {
+  color: var(--on-primary);
+  margin-bottom: var(--space-2);
+}
+
+.cta__success-text {
+  color: var(--on-primary-container);
+  max-width: 320px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1024px) {
+  .cta__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+  .cta__text {
+    text-align: center;
+  }
+  .cta__benefits {
+    align-items: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .cta__form-row {
+    grid-template-columns: 1fr;
+  }
+}
